@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WebAssembly Game Arkanoid!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .row {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        canvas {
+            cursor: move !important;
+            width: 100%;
+            max-width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div id="game_arkanoid">
+            <div class="info">
+                score : <span class="score">0</span>
+                lives: <span class="lives">0</span>
+            </div>
+            <canvas id="canvas"></canvas>
+            <div class="controls">
+                <button class="stop">stop</button>
+                <button class="start">start</button>
+                <button class="restart">restart</button>
+            </div>
+        </div>
+    </div>
+    <script src="game_arkanoid.wasm.js"></script>
+    <script>
+        Module['onRuntimeInitialized'] = onRuntimeInitialized;
+        function jsSetLives(lives) {
+            document.querySelector('#game_arkanoid .lives').textContent = lives;
+        };
+        function jsSetScore(score) {
+            document.querySelector('#game_arkanoid .score').textContent = score;
+        };
+
+        function onRuntimeInitialized() {
+            console.log(Module);
+            Module['canvas'] = (function () { return document.getElementById('canvas'); })();
+            var game = document.getElementById('game_arkanoid');
+            var canvas = document.getElementById('canvas');
+            var score = game.querySelector('.score');
+            var lives = game.querySelector('.lives');
+            var stop = game.querySelector('.stop');
+            var start = game.querySelector('.start');
+            var restart = game.querySelector('.restart');
+
+            stop.addEventListener("click", function (evt) {
+                _gameStop();
+            });
+            start.addEventListener("click", function (evt) {
+                _gameStart();
+            });
+            restart.addEventListener("click", function (evt) {
+                _gameRestart();
+            });
+
+            canvas.addEventListener("mousemove", function (evt) {
+                var rect = this.getBoundingClientRect();
+                var x = evt.clientX - rect.left;
+                var y = evt.clientY - rect.top;
+                _setPlatformPosition(x, y, false, true);
+            }, false);
+            canvas.addEventListener("touchmove", function (evt) {
+                var rect = this.getBoundingClientRect();
+                var x = evt.touches[0].clientX - rect.left;
+                var y = evt.touches[0].clientY - rect.top;
+                _setPlatformPosition(x, y, false, true);
+            }, false);
+        }
+    </script>
+</body>
+
+</html>

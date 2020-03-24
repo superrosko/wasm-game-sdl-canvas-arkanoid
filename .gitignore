@@ -1,0 +1,12 @@
+# Logs
+logs
+*.log
+
+# IDE
+.idea
+.vscode
+*.code-workspace
+
+# Files
+build
+public/*.wasm.*
