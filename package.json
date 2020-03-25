@@ -1,0 +1,31 @@
+{
+  "name": "wasm-game-sdl-canvas-arcanoid",
+  "version": "1.0.0",
+  "description": "A simple implementation of using Emscripten to compile C ++ in WASM with canvas animation using the arkanoid example",
+  "main": "distr/game_arkanoid.wasm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/superrosko/wasm-game-sdl-canvas-arcanoid.git"
+  },
+  "keywords": [
+    "wasm",
+    "c++",
+    "sdl",
+    "canvas",
+    "js",
+    "webasembly",
+    "arcanoid",
+    "game",
+    "webassembly",
+    "arcanoid"
+  ],
+  "author": "Dmitriy Bespalov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/superrosko/wasm-game-sdl-canvas-arcanoid/issues"
+  },
+  "homepage": "https://github.com/superrosko/wasm-game-sdl-canvas-arcanoid#readme"
+}

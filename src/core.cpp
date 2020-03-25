@@ -168,7 +168,7 @@ void setLivesCount(int lives)
 {
     gContext.countLives = lives;
     char buffer[50];
-    sprintf(buffer, "jsSetLives(%d);", lives);
+    sprintf(buffer, "wasmGameArcanoidJsSetLives(%d);", lives);
     emscripten_run_script(buffer);
 }
 
@@ -183,7 +183,7 @@ void setScoreCount(int score)
 {
     gContext.countScore = score;
     char buffer[50];
-    sprintf(buffer, "jsSetScore(%d);", score);
+    sprintf(buffer, "wasmGameArcanoidJsSetScore(%d);", score);
     emscripten_run_script(buffer);
 }
 

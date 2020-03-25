@@ -8,7 +8,7 @@ include_directories(include)
 
 file(GLOB SOURCES src/*.cpp)
 
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/public")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/distr")
 add_executable(${project} ${SOURCES})
 
 message(STATUS "Setting compilation target to WASM")

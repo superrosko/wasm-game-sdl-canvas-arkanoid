@@ -25,12 +25,6 @@ extern "C"
 
     EMSCRIPTEN_KEEPALIVE
     int getScoreCount();
-
-    EMSCRIPTEN_KEEPALIVE
-    void jsSetScore(int score);
-
-    EMSCRIPTEN_KEEPALIVE
-    void jsSetLives(int lives);
 }
 
 SDL_Renderer *getGContextRender();
