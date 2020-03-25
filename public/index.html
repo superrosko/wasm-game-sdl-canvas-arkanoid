@@ -39,10 +39,10 @@
     <script src="game_arkanoid.wasm.js"></script>
     <script>
         Module['onRuntimeInitialized'] = onRuntimeInitialized;
-        function wasmGameArcanoidJsSetLives(lives) {
+        function wasmGameArkanoidJsSetLives(lives) {
             document.querySelector('#game_arkanoid .lives').textContent = lives;
         };
-        function wasmGameArcanoidJsSetScore(score) {
+        function wasmGameArkanoidJsSetScore(score) {
             document.querySelector('#game_arkanoid .score').textContent = score;
         };
 
