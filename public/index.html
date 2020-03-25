@@ -47,7 +47,6 @@
         };
 
         function onRuntimeInitialized() {
-            console.log(Module);
             Module['canvas'] = (function () { return document.getElementById('canvas'); })();
             var game = document.getElementById('game_arkanoid');
             var canvas = document.getElementById('canvas');
