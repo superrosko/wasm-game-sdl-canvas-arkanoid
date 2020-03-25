@@ -38,16 +38,9 @@
     </div>
     <script src="game_arkanoid.wasm.js"></script>
     <script>
-        Module['onRuntimeInitialized'] = onRuntimeInitialized;
-        function wasmGameArkanoidJsSetLives(lives) {
-            document.querySelector('#game_arkanoid .lives').textContent = lives;
-        };
-        function wasmGameArkanoidJsSetScore(score) {
-            document.querySelector('#game_arkanoid .score').textContent = score;
-        };
-
-        function onRuntimeInitialized() {
+        wasmGameArkanoid().then(function (Module) {
             Module['canvas'] = (function () { return document.getElementById('canvas'); })();
+
             var game = document.getElementById('game_arkanoid');
             var canvas = document.getElementById('canvas');
             var score = game.querySelector('.score');
@@ -57,28 +50,35 @@
             var restart = game.querySelector('.restart');
 
             stop.addEventListener("click", function (evt) {
-                _gameStop();
+                Module._gameStop();
             });
             start.addEventListener("click", function (evt) {
-                _gameStart();
+                Module._gameStart();
             });
             restart.addEventListener("click", function (evt) {
-                _gameRestart();
+                Module._gameRestart();
             });
 
             canvas.addEventListener("mousemove", function (evt) {
                 var rect = this.getBoundingClientRect();
                 var x = evt.clientX - rect.left;
                 var y = evt.clientY - rect.top;
-                _setPlatformPosition(x, y, false, true);
+                Module._setPlatformPosition(x, y, false, true);
             }, false);
             canvas.addEventListener("touchmove", function (evt) {
                 var rect = this.getBoundingClientRect();
                 var x = evt.touches[0].clientX - rect.left;
                 var y = evt.touches[0].clientY - rect.top;
-                _setPlatformPosition(x, y, false, true);
+                Module._setPlatformPosition(x, y, false, true);
             }, false);
-        }
+
+        })
+        function wasmGameArkanoidJsSetLives(lives) {
+            document.querySelector('#game_arkanoid .lives').textContent = lives;
+        };
+        function wasmGameArkanoidJsSetScore(score) {
+            document.querySelector('#game_arkanoid .score').textContent = score;
+        };
     </script>
 </body>
 

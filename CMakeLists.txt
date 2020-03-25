@@ -13,4 +13,4 @@ add_executable(${project} ${SOURCES})
 
 message(STATUS "Setting compilation target to WASM")
 set(CMAKE_EXECUTABLE_SUFFIX ".wasm.js")
-set_target_properties(${project} PROPERTIES LINK_FLAGS "-s WASM=1 -s USE_SDL=2 -O3 -s EXTRA_EXPORTED_RUNTIME_METHODS=['ccall'] -s FILESYSTEM=0 -s ENVIRONMENT=web --llvm-lto 1 -flto")
+set_target_properties(${project} PROPERTIES LINK_FLAGS "-s WASM=1 -s USE_SDL=2 -O3 -s EXTRA_EXPORTED_RUNTIME_METHODS=['ccall'] -s MODULARIZE=1 -s EXPORT_NAME=wasmGameArkanoid -s FILESYSTEM=0 -s ENVIRONMENT=web --llvm-lto 1 -flto")
