@@ -7,7 +7,9 @@
 
 ## Introduction
 
-A simple implementation of using Emscripten to compile C ++ in WASM with canvas animation using the arkanoid example
+A simple implementation of using Emscripten to compile C ++ in WASM with canvas animation using the arkanoid example.
+
+Demo: https://pages.rdevelab.ru/wasm-game-sdl-canvas-arkanoid/index.html.
 
 ## Installation
 
