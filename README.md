@@ -9,6 +9,8 @@
 
 A simple implementation of using Emscripten to compile C ++ in WASM with canvas animation using the arkanoid example.
 
+Read more: https://rdevelab.ru/blog/web-assembly/post/wasm-game-sdl-canvas-arkanoid.
+
 Demo: https://pages.rdevelab.ru/wasm-game-sdl-canvas-arkanoid/index.html.
 
 ## Installation
@@ -21,8 +23,8 @@ $ npm i wasm-game-sdl-canvas-arkanoid
 
 ## Credits
 
-- [Dmitriy Bespalov][link-author]
-- [All Contributors][link-contributors]
+-   [Dmitriy Bespalov][link-author]
+-   [All Contributors][link-contributors]
 
 ## License
 
@@ -32,8 +34,7 @@ The MIT License (MIT). Please see [License File][link-license] for more informat
 [link-contributors]: https://github.com/superrosko/wasm-game-sdl-canvas-arkanoid/contributors
 [link-npmjs]: https://www.npmjs.com/package/wasm-game-sdl-canvas-arkanoid
 [link-github]: https://github.com/superrosko/wasm-game-sdl-canvas-arkanoid
-[link-license]: LICENSE
-
+[link-license]: LICENSE.md
 [ico-npmjs]: https://img.shields.io/npm/v/wasm-game-sdl-canvas-arkanoid.svg?style=flat
 [ico-github-size]: https://img.shields.io/github/languages/code-size/superrosko/wasm-game-sdl-canvas-arkanoid.svg?style=flat
 [ico-github-top-language]: https://img.shields.io/github/languages/top/superrosko/wasm-game-sdl-canvas-arkanoid.svg?style=flat
