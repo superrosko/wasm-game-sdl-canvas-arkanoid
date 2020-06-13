@@ -38,8 +38,10 @@
     </div>
     <script src="game_arkanoid.wasm.js"></script>
     <script>
-        wasmGameArkanoid().then(function (Module) {
-            Module['canvas'] = (function () { return document.getElementById('canvas'); })();
+        wasmGameArkanoid['canvas'] = (function () {
+            return document.getElementById('canvas');
+        })();
+        wasmGameArkanoid(wasmGameArkanoid).then(function (Module) {
 
             var game = document.getElementById('game_arkanoid');
             var canvas = document.getElementById('canvas');
