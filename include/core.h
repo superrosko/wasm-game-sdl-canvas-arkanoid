@@ -27,7 +27,14 @@ extern "C"
     int getScoreCount();
 }
 
+int valueInRange(int value, int min, int max);
+int objectsOverlap(SDL_Rect *A, SDL_Rect *B);
+bool checkObjectMoving(SDL_Rect *A, SDL_Rect *B);
+void moveBall();
+void mainloop(void *arg);
 SDL_Renderer *getGContextRender();
+void runLoop();
+void renderWindow();
 int decLivesCount();
 void setLivesCount(int lives);
 int incScoreCount();
