@@ -21,7 +21,7 @@ extern "C"
 
 void setBricksSize()
 {
-    gBricks.width = (int)((getFieldWidth() - 2 * BRICKS_PADDING) / gBricks.lineCount) - BRICKS_SPACE;
+    gBricks.width = (int)((getFieldWidth() - 2 * BRICKS_PADDING + BRICKS_SPACE) / gBricks.lineCount) - BRICKS_SPACE;
     gBricks.height = BRICKS_HEIGHT;
 }
 

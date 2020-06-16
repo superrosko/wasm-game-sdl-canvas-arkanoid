@@ -35,6 +35,7 @@ extern "C"
 extern int getFieldWidth();
 extern int getFieldHeight();
 
+void setBricksSize();
 void setBrickStatus(int number, bool status);
 bool getBrickStatus(int number);
 int getActiveBricks();
