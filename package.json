@@ -1,6 +1,6 @@
 {
   "name": "wasm-game-sdl-canvas-arkanoid",
-  "version": "1.2.0",
+  "version": "1.2.3",
   "description": "A simple implementation of using Emscripten to compile C ++ in WASM with canvas animation using the arkanoid example",
   "main": "distr/game_arkanoid.wasm.js",
   "scripts": {
