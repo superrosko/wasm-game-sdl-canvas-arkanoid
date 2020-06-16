@@ -19,7 +19,7 @@ struct Bricks
 const int BRICKS_LINE_COUNT = 6;
 const int BRICKS_ROWS = 10;
 const int BRICKS_PADDING = 30;
-const int BRICKS_SPACE = 10;
+const int BRICKS_SPACE = 12;
 const int BRICKS_HEIGHT = 10;
 const Color BRICKS_COLOR = {255, 179, 15, 255};
 
